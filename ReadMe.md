@@ -5,10 +5,12 @@ Features:
  - Views a journal
 
 How to run locally (2 methods)?
+
 First Method:
  - Download a zip file through this Github Repository. This can be found in the green "Code" button on this repository, and click on "Download ZIP".
  - Once downloaded, extract it in a project directory in PyCharm. Ensure that PyCharm and Flask is installed on your system.
  - You can start the program.
+
 Second Method:
  - Ensure you have git installed. If not, open PowerShell and input this command: "winget install --id Git.Git -e --source winget"
  - Once it is installed, navigate to your PyCharm directory using cd command in PowerShell. In that case, it's "cd C:\Users\<YourUsername>\PyCharmProjects\<your_project_name>".

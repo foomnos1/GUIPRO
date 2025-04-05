@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(
+                    235deg,
+                    #5A0002,
+                    #230007
+                );
+            }
+
+            .container{
+                border: 2px solid black;
+                padding: 10px;
+                background-color: white;
+                width: 50%;
+            }
+
+            .container h1{
+                text-align: center;
+                margin: 0;
+            }
+
+            table{
+                border-collapse: collapse;
+                width: 95%;
+            }
+
+            table *{
+                padding: 10px;
+            }
+
+            .message{
+                width: 50%;
+            }
+
+            .nav{
+                display: flex;
+                justify-content: end;
+            }
+
+            .table{
+                display: flex;
+                justify-content: center;
+            }
+
+            tr, td{
+                text-align: center;
+            }
+
+            td a{
+                border: 1px solid black;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Created Journals</h1>
+            <div>
+                <div class="nav"><a href="/">Go Back</a></div>
+                <div class="table">
+                    <table border=1>
+                        <tr>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Message</th>
+                            <th>Action</th>
+                        </tr>
+                        {% for entry in entries %}
+                            <tr>
+                                <td>{{ entry.title }}</td>
+                                <td>{{ entry.date }}</td>
+                                <td class="message">{{ entry.description }}</td>
+                                <td>
+                                    <a href="/delete_entry/{{ loop.index0 }}">Delete</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

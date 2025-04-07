@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Journal App</title>
+        <style>
+            body{
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(
+                    235deg,
+                    #5A0002,
+                    #230007
+                );
+            }
+
+            .container{
+                border: 2px solid black;
+                padding: 10px;
+                background-color: white;
+                width: 50%;
+                height: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container *{
+                margin: 0;
+                text-align: center;
+            }
+
+            .container h1{
+                margin-bottom: 10px;
+            }
+
+            .container a{
+                padding: 5px 15px;
+                border: 1px solid black;
+                text-decoration: none;
+            }
+
+            @media (max-width: 425px) {
+                .container{
+                    height: 75%;
+                    width: 75%;
+                }
+
+                .container div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome!</h1>
+            <div>
+                <a href="/new">Create a New Journal</a>
+                <a href="/view_entries">View Past Created Journals</a>
+            </div>
+        </div>
+    </body>
+</html>
